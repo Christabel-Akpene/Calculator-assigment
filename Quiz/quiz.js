@@ -135,24 +135,26 @@ const getQuestion = (data) => {
 };
 
 let quizQuestions = async () => {
+
+  closeLoader.onclick = function(){
+    window.location.replace("mainPage.html");
+
+  }
   try {
     const response = await fetch(url);
     const data = await response.json();
 
     if (!data){
       loader.style.display = "block";
-      closeContainer.onclick = function(){
-        console.log("hurray");
-      }
-      
+
     }
-    else{
+
       quizWrapper.style.display = "block";
       loader.style.display = "none";
       closeContainer.style.display = "none";
       setupEventListeners(data); 
       getQuestion(data);
-    }
+    
     
   } catch (error) {
     console.log(error);
