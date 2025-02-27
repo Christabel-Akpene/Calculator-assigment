@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="quiz.js" defer></script>
+  </head>
+  <body>
+    <div class="parent-container">
+      <div class="quiz-container">
+        <div class="quiz-wrapper">
+          <div class="question-header">
+            <div class="question-header-main">
+              <p>Question No: <span class="questioncount"> 1/10 </span></p>
+              <p class="close">✕</p>
+            </div>
+            <hr />
+
+          </div>
+
+          <div class="question-wrapper">
+            <p id="mainQuestion"></p>
+          </div>
+          <div class="choices-wrapper">
+            <p class="choice-a choices"></p>
+          </div>
+          <div class="choices-wrapper">
+            <p class="choice-b choices"></p>
+          </div>
+          <div class="choices-wrapper">
+            <p class="choice-c choices"></p>
+          </div>
+          <div class="choices-wrapper">
+            <p class="choice-d choices"></p>
+
+          </div>
+
+          <div class="next" id="next">
+            <button>Next</button>
+          </div>
+          
+        </div>
+
+        <div class="loader-container">
+          <div class="close-container">
+            <p class="closeLoader">✕</p>
+          </div>
+          <div class="loader">    
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          </div>
+        </div>
+       
+
+        
+        <div class="endquiz">
+
+          <p>Congratulations on reaching the end of the quiz</p>
+          <p>Your Score is : <span class="playerscore" > 10 / 10 </span> </p>
+          <p class="score_message">Well Done</p>
+
+          <div class="buttons">
+            <button class="restartquiz">Restart Quiz</button>
+            <button class="viewscores">View Scores</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
